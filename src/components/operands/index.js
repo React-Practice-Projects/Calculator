@@ -6,12 +6,13 @@ export default function Operands(props) {
     }
     return(
         <div className = 'operands'>
-            {[...Array(9).keys()].map( num => {
+            {[...Array(10).keys()].map( num => {
                 return (
                     <button 
-                        value = {num+1} 
+                        key = {num}
+                        value = {num} 
                         onClick = {handleClick}>
-                        {num+1}
+                        {num}
                     </button>
                 )
             })}
